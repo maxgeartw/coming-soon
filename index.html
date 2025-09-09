@@ -7,6 +7,7 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white">
   <div class="text-center">
@@ -16,7 +17,7 @@
 
   <!-- CountAPI 記錄訪問次數 -->
   <script>
-    fetch('https://counterapi.dev/hit/maxgeartw/visits')
+    fetch('https://counterapi.dev/v2/workspaces/website/maxgear')
     .then(res => res.json())
     .then(data => {
       console.log("目前訪客次數：", data.value);
@@ -25,6 +26,7 @@
   </script>
 </body>
 </html>
+
 
 
 
