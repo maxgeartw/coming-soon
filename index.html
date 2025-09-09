@@ -17,13 +17,16 @@
   <!-- CountAPI 記錄訪問次數 -->
   <script>
     fetch('https://counterapi.dev/hit/maxgeartw/visits')
-      .then(res => res.json())
-      .then(data => {
-        console.log('網站訪客累計次數：', data.value);
-      });
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visitor-count').innerText = data.value;
+      console.log("目前訪客次數：", data.value);
+    })
+    .catch(err => console.error("CounterAPI 錯誤：", err));
   </script>
 </body>
 </html>
+
 
 
 
