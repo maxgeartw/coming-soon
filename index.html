@@ -19,13 +19,13 @@
     fetch('https://counterapi.dev/hit/maxgeartw/visits')
     .then(res => res.json())
     .then(data => {
-      document.getElementById('visitor-count').innerText = data.value;
       console.log("目前訪客次數：", data.value);
     })
     .catch(err => console.error("CounterAPI 錯誤：", err));
   </script>
 </body>
 </html>
+
 
 
 
